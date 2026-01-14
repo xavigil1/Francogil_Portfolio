@@ -1,0 +1,588 @@
+@charset "UTF-8";
+/* ==========================================================================
+   VARIABLES Y CONFIGURACIÓN GLOBAL
+   ========================================================================== */
+:root {
+  --bg: #050505;
+  --bg-accent: rgba(193, 255, 0, 0.03);
+  --card: #111111;
+  --neon: #c1ff00;
+  --text: #ffffff;
+  --gray: #888;
+  --nav-height: 80px;
+  --transition: all 0.3s ease;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  /* FONDO PROFESIONAL: Combinación de negro con aura neón */
+  background: radial-gradient(circle at 0% 0%, var(--bg-accent) 0%, transparent 40%), radial-gradient(circle at 100% 100%, var(--bg-accent) 0%, transparent 40%), var(--bg);
+  background-attachment: fixed;
+  color: var(--text);
+  font-family: "Inter", sans-serif;
+  line-height: 1.6;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.section {
+  padding: 100px 0;
+  position: relative;
+}
+
+.text-neon {
+  color: var(--neon);
+  text-shadow: 0 0 15px rgba(193, 255, 0, 0.3);
+}
+
+/* ==========================================================================
+   NAVBAR (RESTRUCTURADO)
+   ========================================================================== */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: var(--nav-height);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  transition: var(--transition);
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.navbar.scrolled {
+  height: 70px;
+  background: rgba(5, 5, 5, 0.8);
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo span {
+  color: var(--neon);
+}
+
+/* Menú Desktop */
+.nav-menu {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  align-items: center;
+}
+
+.nav-menu a {
+  text-decoration: none;
+  color: var(--gray);
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.nav-menu a:hover {
+  color: var(--neon);
+}
+
+.nav-btn {
+  background: var(--neon);
+  color: #000 !important;
+  padding: 10px 20px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+/* Hamburguesa Móvil */
+.menu-toggle {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+  background: none;
+  border: none;
+}
+
+.menu-toggle .bar {
+  width: 25px;
+  height: 3px;
+  background: var(--text);
+  transition: var(--transition);
+}
+
+/* ==========================================================================
+   HERO SECTION (FIX OVERLAP)
+   ========================================================================== */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding-top: var(--nav-height); /* Evita que el navbar tape el inicio */
+  position: relative;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 50px;
+  align-items: center;
+  width: 100%;
+}
+
+.pre-title {
+  color: var(--gray);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.hero-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin: 10px 0 20px;
+}
+
+.hero-btns {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.image-frame {
+  position: relative;
+  border-radius: 30px;
+  background: linear-gradient(145deg, #111, #050505);
+  padding: 20px;
+  border: 1px solid rgba(193, 255, 0, 0.15);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+.floating-card {
+  position: absolute;
+  right: -20px;
+  bottom: 20px;
+  background: rgba(20, 20, 20, 0.9);
+  padding: 15px;
+  border-radius: 15px;
+  border-left: 4px solid var(--neon);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+}
+
+/* ==========================================================================
+   SOBRE MÍ (DISEÑO PROFESIONAL)
+   ========================================================================== */
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 60px;
+  align-items: start;
+}
+
+.section-title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 900;
+}
+
+.lead {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin-bottom: 20px;
+}
+
+.services-container {
+  margin: 30px 0;
+}
+
+.service-card {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 20px;
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.service-card:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: translateX(10px);
+}
+
+.service-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: var(--neon);
+}
+
+.about-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.stat-box {
+  background: var(--card);
+  padding: 30px;
+  border-radius: 20px;
+  text-align: center;
+  border-bottom: 3px solid var(--neon);
+}
+
+.stat-box .num {
+  font-size: 2.5rem;
+  font-weight: 900;
+  display: block;
+  font-family: "Montserrat";
+}
+
+/* ==========================================================================
+   BOTONES Y ELEMENTOS COMUNES
+   ========================================================================== */
+.btn-primary, .btn-secondary {
+  padding: 12px 25px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.btn-primary {
+  background: var(--neon);
+  color: #000;
+  box-shadow: 0 10px 20px rgba(193, 255, 0, 0.15);
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 30px rgba(193, 255, 0, 0.25);
+}
+
+.btn-secondary {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: var(--text);
+}
+
+.btn-secondary:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border-color: var(--neon);
+}
+
+.btn-link {
+  color: var(--neon);
+  text-decoration: underline;
+  margin-right: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   PROYECTOS Y SKILLS
+   ========================================================================== */
+.projects-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+/* Contenedor de botones de filtro */
+.filters {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Botón de Filtro Original */
+.filter-btn {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  color: var(--gray);
+  padding: 8px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: var(--transition);
+}
+.filter-btn:hover {
+  border-color: var(--neon);
+  color: var(--text);
+}
+.filter-btn.active {
+  background: var(--neon);
+  color: #000;
+  border-color: transparent;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(193, 255, 0, 0.2);
+}
+
+/* Controles de Flechas Originales */
+.carousel-controls {
+  display: flex;
+  gap: 8px;
+}
+
+.carousel-arrow {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  padding: 8px 14px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.2rem;
+  transition: all 0.2s ease;
+  line-height: 1;
+}
+.carousel-arrow:hover {
+  background: rgba(193, 255, 0, 0.1);
+  color: var(--neon);
+  border-color: var(--neon);
+}
+
+/* Ajustes del Track y Wrap para el carrusel horizontal */
+.projects-wrap {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  padding: 10px 0 25px 0;
+}
+.projects-wrap::-webkit-scrollbar {
+  height: 4px;
+}
+.projects-wrap::-webkit-scrollbar-thumb {
+  background: rgba(193, 255, 0, 0.1);
+  border-radius: 10px;
+}
+
+.projects-track {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.4s ease;
+}
+
+.project-card {
+  min-width: 320px;
+  background: var(--card);
+  border-radius: 15px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  transition: var(--transition);
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  border-color: rgba(193, 255, 0, 0.2);
+}
+
+.project-card img {
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.project-body {
+  padding: 25px;
+}
+
+.soft-skills {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.skill-item {
+  background: var(--card);
+  padding: 25px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* ==========================================================================
+   CONTACTO Y FOOTER
+   ========================================================================== */
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.contact-form input, .contact-form textarea {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 15px;
+  border-radius: 10px;
+  color: #fff;
+  margin-bottom: 15px;
+  outline: none;
+  transition: var(--transition);
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-color: var(--neon);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.site-footer {
+  padding: 30px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  background: rgba(5, 5, 5, 0.5);
+}
+
+.footer-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+.footer-brand .logo {
+  font-size: 1.2rem;
+  display: block;
+  margin-bottom: 4px;
+}
+.footer-brand p {
+  color: var(--gray);
+  font-size: 0.85rem;
+  font-weight: 400;
+}
+
+.footer-links {
+  display: flex;
+  gap: 20px;
+}
+.footer-links a {
+  text-decoration: none;
+  color: var(--gray);
+  font-size: 0.9rem;
+  transition: var(--transition);
+}
+.footer-links a:hover {
+  color: var(--neon);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--gray);
+  opacity: 0.6;
+}
+
+/* ==========================================================================
+   RESPONSIVE (MOBILE FIX)
+   ========================================================================== */
+@media (max-width: 992px) {
+  .hero-grid, .about-grid, .contact-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    padding: 120px 0 60px;
+    min-height: auto;
+  }
+  .hero-image {
+    order: -1;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  .hero-content {
+    text-align: center;
+  }
+  .hero-btns {
+    justify-content: center;
+  }
+  .floating-card {
+    right: 0;
+  }
+  /* Navbar Móvil */
+  .menu-toggle {
+    display: flex;
+  }
+  .nav-menu {
+    position: fixed;
+    top: var(--nav-height);
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - var(--nav-height));
+    background: var(--bg);
+    flex-direction: column;
+    padding: 50px 0;
+    transition: 0.5s ease;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+  }
+  .nav-menu.active {
+    right: 0;
+  }
+}
+@media (max-width: 768px) {
+  /* Footer en móviles: se vuelve vertical pero mantiene poco espacio */
+  .footer-grid {
+    flex-direction: column;
+    text-align: center;
+    gap: 15px;
+  }
+  .footer-links {
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+  .section {
+    padding: 60px 0;
+  }
+  .project-card {
+    min-width: 280px;
+  }
+}
+/* Media Query específico para estos controles */
+@media (max-width: 600px) {
+  .projects-controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .carousel-controls {
+    align-self: flex-end;
+    margin-top: -10px;
+  }
+}/*# sourceMappingURL=main.css.map */

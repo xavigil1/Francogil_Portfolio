@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Franco Gil | Industrial Engineer & Developer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">FRANCO<span>GIL</span></a>
+            <button class="menu-toggle" id="mobile-menu" aria-label="Abrir menú">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+            <ul class="nav-menu" id="nav-links">
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#skills">Habilidades</a></li>
+                <li><a href="#contacto" class="nav-btn">Hablemos</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="container hero-grid">
+            <div class="hero-content" data-aos="fade-right" data-aos-duration="1200">
+                <span class="pre-title">Ingeniería + Tecnología</span>
+                <h1 class="hero-title">FRANCO <span class="text-neon">GIL</span></h1>
+                <h2 class="hero-subtitle">Transformo Procesos, <br><span class="text-neon">Impulso el Futuro.</span></h2>
+                <p>Ingeniero Industrial especializado en crear soluciones digitales que optimizan operaciones. Desarrollo web, AppSheet y automatizaciones orientadas a resultados.</p>
+                <div class="hero-btns">
+                    <a href="#proyectos" class="btn-primary">Ver Portafolio</a>
+                    <a href="#contacto" class="btn-secondary">Contacto</a>
+                </div>
+            </div>
+            <div class="hero-image" data-aos="fade-left" data-aos-duration="1200" data-aos-delay="300">
+                <div class="image-frame">
+                    <img src="assets/img/profile-placeholder.jpg" alt="Franco Gil - Ingeniero Industrial">
+                    <div class="floating-card">
+                        <span>+5 años</span>
+                        <p>Optimización Industrial</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="sobre-mi" class="section">
+        <div class="container about-grid">
+            <div class="about-text" data-aos="fade-up">
+                <h2 class="section-title">Sobre <span class="text-neon">Mí</span></h2>
+                <p class="lead">
+                    Ingeniero Industrial especializado en <strong>automatización de procesos</strong> y <strong>transformación digital.</strong>
+                </p>
+                
+                <div class="about-description">
+                    <p>
+                        Egresado de la UNEXPO Barquisimeto (2018), fusiono la metodología de mejora continua con el desarrollo de software. Mi formación me permite entender la raíz operativa de los retos empresariales, habiendo liderado implementaciones de sistemas MRP y optimización administrativa y logística en el sector alimentos.
+                    </p>
+                </div>
+
+                <div class="services-container">
+                    <div class="service-card">
+                        <span class="text-neon">✔</span>
+                        <div>
+                            <h3>AppSheet Expert</h3>
+                            <p>Ecosistemas móviles a medida para automatizar flujos de trabajo industriales y administrativos.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <span class="text-neon">✔</span>
+                        <div>
+                            <h3>Web Developer</h3>
+                            <p>Plataformas responsivas y funcionales (HTML, SASS, JS) enfocadas en eficiencia técnica y UX.</p>
+                        </div>
+                    </div>
+                    <div class="service-card">
+                        <span class="text-neon">✔</span>
+                        <div>
+                            <h3>Data Automation</h3>
+                            <p>Instructor en Excel y Google Sheets Avanzado para la gestión inteligente de datos y reportes.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="highlights">
+                    <div class="h-item">
+                        <span class="text-neon">✔</span> 
+                        <span><strong>Procesos:</strong> MRP, Logística y Costos.</span>
+                    </div>
+                    <div class="h-item">
+                        <span class="text-neon">✔</span> 
+                        <span><strong>Soft Skills:</strong> Liderazgo, análisis crítico y creatividad.</span>
+                    </div>
+                </div>
+                
+                <p class="quote-text text-neon">
+                    "Mi misión: transformar cuellos de botella en sistemas digitales rentables."
+                </p>
+            </div>
+        
+            <div class="about-stats" data-aos="zoom-in">
+                <div class="stat-box">
+                    <span class="num">UNEXPO</span>
+                    <p>Alma Mater</p>
+                </div>
+                <div class="stat-box">
+                    <span class="num">2018</span>
+                    <p>Año de Egreso</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="proyectos" class="section">
+        <div class="container">
+            <h2 class="section-title">Proyectos</h2>
+            <p class="section-sub">Filtra y explora proyectos de Ingeniería, Desarrollo Web y AppSheet.</p>
+
+            <div class="projects-controls" data-aos="fade-up">
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="all">Todos</button>
+                    <button class="filter-btn" data-filter="ingenieria">Ingeniería</button>
+                    <button class="filter-btn" data-filter="web">Desarrollo Web</button>
+                    <button class="filter-btn" data-filter="appsheet">AppSheet</button>
+                </div>
+                <div class="carousel-controls">
+                    <button id="prev" class="carousel-arrow" aria-label="Anterior">‹</button>
+                    <button id="next" class="carousel-arrow" aria-label="Siguiente">›</button>
+                </div>
+            </div>
+
+            <div class="projects-wrap" data-aos="fade-up">
+                <div class="projects-track">
+                    <article class="project-card" data-category="ingenieria">
+                        <img src="assets/img/project-industrial1.jpg" alt="Sistema de Gestión Industrial">
+                        <div class="project-body">
+                            <h3>Mejora de Sistemas de Gestión Empresarial</h3>
+                            <p>Haciendo uso de Microsoft Excel y Google Sheets para diversas empresas del sector industrial.</p>
+                            <div class="project-links">
+                                <a href="https://drive.google.com/file/d/1C5W66HgGtMWr-hGuFuR41qKadNmiDZfD/view" class="btn-link" target="_blank" rel="noopener">Ver más</a>
+                                <a href="https://drive.google.com/file/d/1C5W66HgGtMWr-hGuFuR41qKadNmiDZfD/view" class="btn-link" target="_blank" rel="noopener">Descargar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="ingenieria">
+                        <img src="assets/img/project-industrial2.jpg" alt="Cursos de Excel">
+                        <div class="project-body">
+                            <h3>Instructor de curso avanzado de Excel y Google Sheet</h3>
+                            <p>Manejo y Analisis de Bases de Datos, KPIs, Dashboards y sistemas de gestión industrial</p>
+                            <div class="project-links">
+                                <a href="https://www.youtube.com/@gilcolproducciones" class="btn-link" target="_blank" rel="noopener">Ver más</a>
+                                <a href="https://www.youtube.com/@gilcolproducciones" class="btn-link" target="_blank" rel="noopener">Descargar</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <img src="assets/img/project-web1.jpg" alt="XGF Beauty">
+                        <div class="project-body">
+                            <h3>XGF Beauty | Landing de Ecommerce</h3>
+                            <p>Desarrollo Frontend responsive con HTML, Sass CSS y JS.</p>
+                            <div class="project-links">
+                                <a href="https://xavigil1.github.io/XGF_Beauty/" class="btn-link" target="_blank" rel="noopener">Ver web</a>
+                                <a href="https://github.com/xavigil1" class="btn-link" target="_blank" rel="noopener">Ficha</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="appsheet">
+                        <img src="assets/img/project-appsheet1.jpg" alt="App de Control de Producción">
+                        <div class="project-body">
+                            <h3>STARX Administrative App</h3>
+                            <p>Sistema Integral de Gestión de Ventas, Inventario y Finanzas.</p>
+                            <div class="project-links">
+                                <a href="https://drive.google.com/file/d/1Tr7obQmgyMkdWVdBt1r-fgGPKNvXw0-D/view?usp=drive_link" class="btn-link" target="_blank" rel="noopener">Ver</a>
+                                <a href="https://drive.google.com/file/d/1Tr7obQmgyMkdWVdBt1r-fgGPKNvXw0-D/view?usp=drive_link" class="btn-link" target="_blank" rel="noopener">Docs</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="appsheet">
+                        <img src="assets/img/project-appsheet2.jpg" alt="IM Security App">
+                        <div class="project-body">
+                            <h3>IM Security App</h3>
+                            <p>Sistema Integral de Protección a tus trabajadores y empresa.</p>
+                            <div class="project-links">
+                                <a href="https://drive.google.com/file/d/1jolMYjnXyDpu552oSvtSsbCtAxzOrnAe/view?usp=sharing" class="btn-link" target="_blank" rel="noopener">Ver</a>
+                                <a href="https://drive.google.com/file/d/1jolMYjnXyDpu552oSvtSsbCtAxzOrnAe/view?usp=sharing" class="btn-link" target="_blank" rel="noopener">Docs</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <img src="assets/img/project-web2.jpg" alt="Xavigil Film">
+                        <div class="project-body">
+                            <h3>Xavigil Film | Landing para Portafolio de Influencer</h3>
+                            <p>Desarrollo Frontend responsive con HTML, Sass CSS y JS.</p>
+                            <div class="project-links">
+                                <a href="https://xavigil1.github.io/xavigilfilmweb/" class="btn-link" target="_blank" rel="noopener">Ver web</a>
+                                <a href="https://github.com/xavigil1" class="btn-link" target="_blank" rel="noopener">Ficha</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <img src="assets/img/project-web3.jpg" alt="GilCol Confecciones">
+                        <div class="project-body">
+                            <h3>GilCol Confecciones | Pagina Web de Moda y Estilo</h3>
+                            <p>Desarrollo Frontend responsive con HTML, CSS y JS.</p>
+                            <div class="project-links">
+                                <a href="https://xavigil1.github.io/gilcolconfecciones/" class="btn-link" target="_blank" rel="noopener">Ver web</a>
+                                <a href="https://github.com/xavigil1" class="btn-link" target="_blank" rel="noopener">Ficha</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <img src="assets/img/project-web4.jpg" alt="GilCol Agency">
+                        <div class="project-body">
+                            <h3>GilCol Agency | Plantilla de Pagina Web de Agencia</h3>
+                            <p>Desarrollo Frontend responsive con HTML, CSS, Bootstrap y JS.</p>
+                            <div class="project-links">
+                                <a href="https://xavigil1.github.io/PLANTILLA-WEB-GCP-AGENCY/" class="btn-link" target="_blank" rel="noopener">Ver web</a>
+                                <a href="https://github.com/xavigil1" class="btn-link" target="_blank" rel="noopener">Ficha</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="project-card" data-category="web">
+                        <img src="assets/img/project-web5.jpg" alt="Portafolio Web">
+                        <div class="project-body">
+                            <h3>Portafolio Web | Dark Mode Switcher</h3>
+                            <p>Web adaptable con modo nocturno integrado, usando HTML5, Sass, CSS3, JS y iconos Fontawesome.</p>
+                            <div class="project-links">
+                                <a href="https://xavigil1.github.io/Web-Portfolio-GCP1/" class="btn-link" target="_blank" rel="noopener">Ver web</a>
+                                <a href="https://github.com/xavigil1" class="btn-link" target="_blank" rel="noopener">Ficha</a>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Habilidades Personales</h2>
+            <p class="section-sub">Un resumen de las habilidades que aplico en proyectos y equipos.</p>
+            <div class="skills-grid soft-skills">
+                <div class="skill-item" data-aos="fade-up">
+                    <div class="skill-badge">Responsabilidad</div>
+                    <p class="skill-desc">Compromiso con plazos y calidad en entregas.</p>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="100">
+                    <div class="skill-badge">Puntualidad</div>
+                    <p class="skill-desc">Planificación y cumplimiento de hitos.</p>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="200">
+                    <div class="skill-badge">Comunicación</div>
+                    <p class="skill-desc">Claridad con stakeholders y equipos técnicos.</p>
+                </div>
+                <div class="skill-item" data-aos="fade-up" data-aos-delay="300">
+                    <div class="skill-badge">Trabajo en equipo</div>
+                    <p class="skill-desc">Colaboración para soluciones prácticas y escalables.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="section">
+        <div class="container">
+            <h2 class="section-title">Contacto</h2>
+            <p class="section-sub">¿Quieres colaborar o conversar sobre un proyecto? Escríbeme.</p>
+            <div class="contact-grid">
+                <form class="contact-form" action="https://formsubmit.co/xavigil.fgbusiness@gmail.com" method="POST">
+                    <!-- Formsubmit hidden helpers -->
+                    <input type="hidden" name="_subject" value="Nuevo contacto desde Xavigil Film">
+                    <input type="hidden" name="_template" value="table">
+                    <input type="hidden" name="_next" value="./thank-you.html">
+                    
+                    <!-- Honeypot to deter bots -->
+                    <input type="text" name="name" placeholder="Tu nombre" required>
+                    <input type="email" name="email" placeholder="Tu email" required>
+                    <textarea name="message" rows="5" placeholder="Mensaje" required></textarea>
+                    <button class="btn-primary" type="submit">Enviar Mensaje</button>
+                </form>
+
+                <div class="contact-info">
+                    <h3>Contacto directo</h3>
+                    <p>Email: <a href="mailto:xavigil.fgbusiness@gmail.com">xavigil.fgbusiness@gmail.com</a></p>
+                    <p>LinkedIn: <a href="https://www.linkedin.com/in/franco-gil-7a63a1125/" target="_blank" rel="noopener">Perfil Profesional</a></p>
+                    <p>Ubicación: El Tocuyo, Venezuela</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">FRANCO<span>GIL</span></a>
+                <p>Ingeniero Industrial • Desarrollador Web • AppSheet</p>
+            </div>
+            <div class="footer-links">
+                <a href="#sobre-mi">Sobre Mí</a>
+                <a href="#proyectos">Proyectos</a>
+                <a href="#skills">Habilidades</a>
+                <a href="#contacto">Contacto</a>
+            </div>
+            <div class="footer-copy">© 2026 Franco Gil | Optimización & Tecnología</div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
