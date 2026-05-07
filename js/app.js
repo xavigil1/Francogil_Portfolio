@@ -141,4 +141,75 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // --- 6. MANEJO DEL FORMULARIO DE CONTACTO ---
+    const contactForm = document.querySelector('.contact-form');
+    const submitBtn = contactForm?.querySelector('button[type="submit"]');
+
+    if (contactForm && submitBtn) {
+        contactForm.addEventListener('submit', (e) => {
+            // Mostrar indicador de carga
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Enviando...';
+
+            // Crear notificación de éxito
+            const createNotification = () => {
+                const notification = document.createElement('div');
+                notification.className = 'success-notification';
+                notification.innerHTML = `
+                    <div class="notification-content">
+                        <span class="notification-icon">✅</span>
+                        <div class="notification-text">
+                            <h4>¡Mensaje enviado exitosamente!</h4>
+                            <p>Pronto me pondré en contacto con usted al revisar la propuesta.</p>
+                        </div>
+                        <button class="notification-close" aria-label="Cerrar notificación">×</button>
+                    </div>
+                `;
+
+                // Agregar al DOM
+                document.body.appendChild(notification);
+
+                // Animación de entrada
+                setTimeout(() => notification.classList.add('show'), 100);
+
+                // Auto-cerrar después de 5 segundos
+                const autoClose = setTimeout(() => {
+                    closeNotification(notification);
+                }, 5000);
+
+                // Evento para cerrar manualmente
+                const closeBtn = notification.querySelector('.notification-close');
+                closeBtn.addEventListener('click', () => {
+                    clearTimeout(autoClose);
+                    closeNotification(notification);
+                });
+
+                // Función para cerrar notificación
+                const closeNotification = (notif) => {
+                    notif.classList.remove('show');
+                    setTimeout(() => {
+                        if (notif.parentNode) {
+                            notif.parentNode.removeChild(notif);
+                        }
+                    }, 300);
+                };
+            };
+
+            // Simular envío exitoso (FormSubmit manejará el envío real)
+            // En un escenario real, aquí irías a verificar el envío
+            setTimeout(() => {
+                // Restaurar botón
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Enviar Mensaje';
+
+                // Limpiar formulario
+                contactForm.reset();
+
+                // Mostrar notificación
+                createNotification();
+            }, 1000); // Simular tiempo de envío
+        });
+    }
+
 });
